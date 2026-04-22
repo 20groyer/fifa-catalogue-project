@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FIFA Catalog | Teams</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+</head>
+<body class="page-teams">
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">⚽ FIFA<span>Catalog</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="players.html">Top Rated</a></li>
+      <li><a href="youngsters.html">Youngsters</a></li>
+      <li><a href="teams.html" class="active">Teams</a></li>
+      <li><a href="comparison.html">Compare</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+  </nav>
+
+  <header class="page-hero page-hero--teams">
+    <div class="page-hero-content">
+      <p class="hero-eyebrow">Club Squads</p>
+      <h1>The <span>Teams</span></h1>
+      <p>From the pinnacle to the… well, Arsenal.</p>
+    </div>
+  </header>
+
+  <section class="section">
+
+    <!-- Top Teams -->
+    <div class="teams-tier-header tier-elite">
+      <div class="tier-badge">👑 ELITE</div>
+      <h2>Top Teams</h2>
+      <p>The truly dominant clubs</p>
+    </div>
+    <div class="team-showcase" id="top-teams">
+      <!-- Populated by scripts.js via renderTeams('top') -->
+    </div>
+
+    <!-- Not So Top Teams -->
+    <div class="teams-tier-header tier-notso" style="margin-top: 60px;">
+      <div class="tier-badge">😬 NOT SO TOP</div>
+      <h2>The Others</h2>
+      <p>Bless their hearts. They're trying.</p>
+    </div>
+    <div class="team-showcase" id="notso-teams">
+      <!-- Populated by scripts.js via renderTeams('notso') -->
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">⚽ FIFACatalog</span>
+      <p>A fan-made data catalog. Not affiliated with EA Sports or FIFA.</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="players.html">Players</a>
+        <a href="youngsters.html">Youngsters</a>
+        <a href="teams.html">Teams</a>
+        <a href="comparison.html">Compare</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

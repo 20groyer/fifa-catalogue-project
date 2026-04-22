@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FIFA Catalog | Youngsters</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+</head>
+<body class="page-youngsters">
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">⚽ FIFA<span>Catalog</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="players.html">Top Rated</a></li>
+      <li><a href="youngsters.html" class="active">Youngsters</a></li>
+      <li><a href="teams.html">Teams</a></li>
+      <li><a href="comparison.html">Compare</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+  </nav>
+
+  <header class="page-hero page-hero--youngsters">
+    <div class="page-hero-content">
+      <p class="hero-eyebrow">Rising Stars</p>
+      <h1>Top <span>Youngsters</span></h1>
+      <p>The next generation — under 23 and already elite</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="pos-filter-bar">
+      <button class="pos-btn active" data-pos="ALL" onclick="filterYoungsters('ALL')">All</button>
+      <button class="pos-btn" data-pos="ST" onclick="filterYoungsters('ST')">⚡ Strikers</button>
+      <button class="pos-btn" data-pos="CM" onclick="filterYoungsters('CM')">🧠 Midfielders</button>
+      <button class="pos-btn" data-pos="LW" onclick="filterYoungsters('LW')">🌪️ Wingers</button>
+      <button class="pos-btn" data-pos="CB" onclick="filterYoungsters('CB')">🛡️ Defenders</button>
+      <button class="pos-btn" data-pos="GK" onclick="filterYoungsters('GK')">🧤 GKs</button>
+    </div>
+
+    <p class="result-count">Showing <span id="result-count">0</span> youngsters</p>
+
+    <div class="player-card-grid" id="youngsters-grid">
+      <!-- Populated by scripts.js via renderYoungsters() -->
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">⚽ FIFACatalog</span>
+      <p>A fan-made data catalog. Not affiliated with EA Sports or FIFA.</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="players.html">Players</a>
+        <a href="youngsters.html">Youngsters</a>
+        <a href="teams.html">Teams</a>
+        <a href="comparison.html">Compare</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
