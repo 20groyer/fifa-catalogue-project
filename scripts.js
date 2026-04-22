@@ -114,7 +114,7 @@
     overall: 89,
     age: 33,
     image: "https://publish.realmadrid.com/content/dam/portals/realmadrid-com/es-es/sports/football/3kq9cckrnlogidldtdie2fkbl/players/thibaut-courtois/assets/COURTOIS_550x650_SinParche.png",
-    stats: { PAC: 85, SHO: 89, PAS: 76, DRI: 90, DEF: 46, PHY: 88 },
+    stats: { DIV: 85, HAN: 89, PAS: 76, REF: 90, DEF: 46, PHY: 88 },
     isYoungster: false,
   },
   {
