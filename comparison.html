@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FIFA Catalog | Compare Players</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+</head>
+<body class="page-comparison">
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">⚽ FIFA<span>Catalog</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="players.html">Top Rated</a></li>
+      <li><a href="youngsters.html">Youngsters</a></li>
+      <li><a href="teams.html">Teams</a></li>
+      <li><a href="comparison.html" class="active">Compare</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+  </nav>
+
+  <header class="page-hero page-hero--comparison">
+    <div class="page-hero-content">
+      <p class="hero-eyebrow">Head to Head</p>
+      <h1>Player <span>Comparison</span></h1>
+      <p>Select two players and see who comes out on top</p>
+    </div>
+  </header>
+
+  <section class="section">
+
+    <!-- Selectors -->
+    <div class="comparison-selectors">
+      <div class="selector-block">
+        <label for="player1-select">Player 1</label>
+        <select id="player1-select" onchange="updateComparison()">
+          <option value="">— Select a player —</option>
+          <!-- Options injected by scripts.js -->
+        </select>
+      </div>
+      <div class="vs-badge">VS</div>
+      <div class="selector-block">
+        <label for="player2-select">Player 2</label>
+        <select id="player2-select" onchange="updateComparison()">
+          <option value="">— Select a player —</option>
+          <!-- Options injected by scripts.js -->
+        </select>
+      </div>
+    </div>
+
+    <!-- Comparison Display -->
+    <div class="comparison-display" id="comparison-display">
+      <div class="comparison-placeholder">
+        <p>👆 Select two players above to begin the comparison</p>
+      </div>
+    </div>
+
+    <!--
+      JS hint: comparison-display should show two .compare-card divs side by side.
+      Each card shows: name, position, overall rating, and a stat bar for each attribute.
+      Stat bars use width % based on the stat value (0-100).
+      Highlight the winning stat in gold on each row.
+    -->
+
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">⚽ FIFACatalog</span>
+      <p>A fan-made data catalog. Not affiliated with EA Sports or FIFA.</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="players.html">Players</a>
+        <a href="youngsters.html">Youngsters</a>
+        <a href="teams.html">Teams</a>
+        <a href="comparison.html">Compare</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
