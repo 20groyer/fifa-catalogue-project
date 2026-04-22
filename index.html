@@ -1,31 +1,175 @@
-<!doctype html>
-<html>
-  <head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles" />
-    <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="scripts.js"></script>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FIFA Catalog | Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+</head>
+<body class="page-home">
 
-  <body>
-    <header class="main-header">
-      <h1 class="title">LA TV Shows</h1>
-    </header>
-    <div id="card-container"></div>
-    <div class="card" style="display: none">
-      <div class="card-content">
-        <h2>TV Show Title</h2>
-        <img src="" alt="TV Show Poster" />
-        <ul>
-          <li>Bullet Point 1</li>
-          <li>Bullet Point 2</li>
-          <li>Bullet Point 3</li>
-        </ul>
+  <!-- NAV -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">⚽ FIFA<span>Catalog</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="players.html">Top Rated</a></li>
+      <li><a href="youngsters.html">Youngsters</a></li>
+      <li><a href="teams.html">Teams</a></li>
+      <li><a href="comparison.html">Compare</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">The Ultimate</p>
+      <h1 class="hero-title">FIFA<br/><span>Catalog</span></h1>
+      <p class="hero-sub">Explore elite players, rising stars, top-tier clubs,<br/>and head-to-head comparisons — all in one place.</p>
+      <div class="hero-cta">
+        <a href="players.html" class="btn btn-primary">Browse Players</a>
+        <a href="comparison.html" class="btn btn-ghost">Compare Now</a>
       </div>
     </div>
-    <div class="footer">
-      <button onclick="quoteAlert()">Get A Quote!</button>
-      <button onclick="removeLastCard()">Remove A Card!</button>
+    <div class="hero-card-stack">
+      <div class="hero-player-card card-back"></div>
+      <div class="hero-player-card card-mid">
+        <div class="hpc-rating">96</div>
+        <div class="hpc-pos">ST</div>
+        <div class="hpc-img">⚽</div>
+        <div class="hpc-name">Elite Striker</div>
+        <div class="hpc-stats">
+          <span>PAC <b>96</b></span>
+          <span>SHO <b>95</b></span>
+          <span>PAS <b>81</b></span>
+        </div>
+      </div>
+      <div class="hero-player-card card-front">
+        <div class="hpc-rating">94</div>
+        <div class="hpc-pos">CAM</div>
+        <div class="hpc-img">🎯</div>
+        <div class="hpc-name">Top Playmaker</div>
+        <div class="hpc-stats">
+          <span>DRI <b>97</b></span>
+          <span>PAS <b>94</b></span>
+          <span>SHO <b>88</b></span>
+        </div>
+      </div>
     </div>
-  </body>
+  </section>
+
+  <!-- FEATURED CATEGORIES -->
+  <section class="section categories-section">
+    <div class="section-header">
+      <h2>Explore <span>Categories</span></h2>
+      <p>Dive deep into every corner of the beautiful game</p>
+    </div>
+    <div class="categories-grid">
+      <a href="players.html?pos=ST" class="cat-card cat-striker">
+        <div class="cat-icon">🎯</div>
+        <h3>Strikers</h3>
+        <p>Top 30 rated forwards</p>
+        <span class="cat-arrow">→</span>
+      </a>
+      <a href="players.html?pos=CM" class="cat-card cat-mid">
+        <div class="cat-icon">🧠</div>
+        <h3>Midfielders</h3>
+        <p>Creative engines & box-to-box beasts</p>
+        <span class="cat-arrow">→</span>
+      </a>
+      <a href="players.html?pos=CB" class="cat-card cat-def">
+        <div class="cat-icon">🛡️</div>
+        <h3>Defenders</h3>
+        <p>The walls that never break</p>
+        <span class="cat-arrow">→</span>
+      </a>
+      <a href="players.html?pos=LW" class="cat-card cat-wing">
+        <div class="cat-icon">⚡</div>
+        <h3>Wingers</h3>
+        <p>Pace, skill, and flair on the flanks</p>
+        <span class="cat-arrow">→</span>
+      </a>
+      <a href="players.html?pos=GK" class="cat-card cat-gk">
+        <div class="cat-icon">🧤</div>
+        <h3>Goalkeepers</h3>
+        <p>The last line of defence</p>
+        <span class="cat-arrow">→</span>
+      </a>
+      <a href="youngsters.html" class="cat-card cat-young">
+        <div class="cat-icon">🌟</div>
+        <h3>Youngsters</h3>
+        <p>The future of football</p>
+        <span class="cat-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- TOP PLAYERS STRIP -->
+  <section class="section featured-players-section">
+    <div class="section-header">
+      <h2>Featured <span>Players</span></h2>
+      <p>Hand-picked elite cards from across the catalog</p>
+    </div>
+    <div class="player-strip" id="featured-player-strip">
+      <!-- Populated by scripts.js -->
+    </div>
+    <div class="strip-cta">
+      <a href="players.html" class="btn btn-primary">View All Players</a>
+    </div>
+  </section>
+
+  <!-- PAGES GUIDE -->
+  <section class="section pages-guide-section">
+    <div class="section-header">
+      <h2>What's <span>Inside</span></h2>
+      <p>Navigate the catalog — here's everywhere you can go</p>
+    </div>
+    <div class="pages-grid">
+      <a href="players.html" class="page-guide-card">
+        <div class="pgc-number">01</div>
+        <h3>Top Rated Players</h3>
+        <p>Filter by position and browse the world's best rated players. Switch between ST, CAM, CM, CB, LW, and GK in one click.</p>
+        <span class="pgc-link">Explore →</span>
+      </a>
+      <a href="youngsters.html" class="page-guide-card">
+        <div class="pgc-number">02</div>
+        <h3>Youngsters</h3>
+        <p>Discover the rising stars under 23. Filtered by position — defenders, strikers, wingers, midfielders, and GKs.</p>
+        <span class="pgc-link">Explore →</span>
+      </a>
+      <a href="teams.html" class="page-guide-card">
+        <div class="pgc-number">03</div>
+        <h3>Teams</h3>
+        <p>Deep dive into squads. The very best (Barcelona) and the not-so-best (sorry, Arsenal 😬) — squad cards and stats.</p>
+        <span class="pgc-link">Explore →</span>
+      </a>
+      <a href="comparison.html" class="page-guide-card">
+        <div class="pgc-number">04</div>
+        <h3>Player Comparison</h3>
+        <p>Pick any two players from the catalog and see a side-by-side stat breakdown. Who comes out on top?</p>
+        <span class="pgc-link">Explore →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">⚽ FIFACatalog</span>
+      <p>A fan-made data catalog. Not affiliated with EA Sports or FIFA.</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="players.html">Players</a>
+        <a href="youngsters.html">Youngsters</a>
+        <a href="teams.html">Teams</a>
+        <a href="comparison.html">Compare</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
 </html>
