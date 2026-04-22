@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FIFA Catalog | Top Rated Players</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+</head>
+<body class="page-players">
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">⚽ FIFA<span>Catalog</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="players.html" class="active">Top Rated</a></li>
+      <li><a href="youngsters.html">Youngsters</a></li>
+      <li><a href="teams.html">Teams</a></li>
+      <li><a href="comparison.html">Compare</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+  </nav>
+
+  <header class="page-hero page-hero--players">
+    <div class="page-hero-content">
+      <p class="hero-eyebrow">FIFA Catalog</p>
+      <h1>Top Rated <span>Players</span></h1>
+      <p>The world's elite — filtered by position</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <!-- Position Filter Tabs -->
+    <div class="pos-filter-bar">
+      <button class="pos-btn active" data-pos="ALL" onclick="filterByPosition('ALL')">All</button>
+      <button class="pos-btn" data-pos="ST" onclick="filterByPosition('ST')">⚡ ST</button>
+      <button class="pos-btn" data-pos="CAM" onclick="filterByPosition('CAM')">🎯 CAM</button>
+      <button class="pos-btn" data-pos="CM" onclick="filterByPosition('CM')">🧠 CM</button>
+      <button class="pos-btn" data-pos="LW" onclick="filterByPosition('LW')">🌪️ LW / RW</button>
+      <button class="pos-btn" data-pos="CB" onclick="filterByPosition('CB')">🛡️ CB</button>
+      <button class="pos-btn" data-pos="GK" onclick="filterByPosition('GK')">🧤 GK</button>
+    </div>
+
+    <p class="result-count">Showing <span id="result-count">0</span> players</p>
+
+    <!-- Player Card Grid -->
+    <div class="player-card-grid" id="player-card-grid">
+      <!-- Populated by scripts.js via renderPlayerCards() -->
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">⚽ FIFACatalog</span>
+      <p>A fan-made data catalog. Not affiliated with EA Sports or FIFA.</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="players.html">Players</a>
+        <a href="youngsters.html">Youngsters</a>
+        <a href="teams.html">Teams</a>
+        <a href="comparison.html">Compare</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
